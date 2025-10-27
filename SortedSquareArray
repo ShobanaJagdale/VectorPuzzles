@@ -1,0 +1,9 @@
+#include <vector>
+using namespace std;
+
+vector<int> sortedSquaredArray(vector<int> array) {
+  vector<int> squaredarray(array.size());
+  std::transform(array.begin(),array.end(),squaredarray.begin(),[](int num){return num*num;});     
+  std::sort(squaredarray.begin(),squaredarray.end());
+  return squaredarray;
+}
